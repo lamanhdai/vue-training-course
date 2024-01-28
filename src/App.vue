@@ -1,14 +1,26 @@
 <script setup>
 import {ref, onCreated} from 'vue'
+
   let message = ref('');
-  onCreated(()=> {
+
+
+
+  const greetMessage = () => {
     message.value = 'Hello Vue Composition API';
+  }
+
+
+  onCreated(()=> {
+    greetMessage();
   })
 </script>
 
 <template>
-    <div>{{ message }}</div>
+    <div class="text-center">{{ message }}</div>
 </template>
 
 <style scoped>
+.text-center {
+    text-align: center;
+}
 </style>

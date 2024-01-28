@@ -17,8 +17,11 @@ export default {
 </script>
 
 <template>
-    <div>{{ message }}</div>
+    <div class="text-center">{{ message }}</div>
 </template>
 
 <style scoped>
+.text-center {
+    text-align: center;
+}
 </style>
