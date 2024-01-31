@@ -9,18 +9,18 @@
     <div id="app">{{message}}</div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-        const { createApp, ref, onCreated } = Vue
+        const { createApp, ref, onBeforeMount } = Vue
         createApp({
             setup() {
                 const message = ref('')
-                onCreated(() => {
+                onBeforeMount(() => {
                     message.value = 'Hello vue composition API'
                 })
                 return {
                     message
                 }
             }
-        })
+        }).mount('#app')
     </script>
 </body>
 </html>
